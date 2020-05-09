@@ -6,6 +6,7 @@ timestamps
     node(buildAgent)
     {  
         stage('Select Env And Invoke Playbook')
+        {
         // {  dir('ansible')
         //     {
         //         try{
