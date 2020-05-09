@@ -1,0 +1,9 @@
+--- 
+- name: "Unlockuser"
+  hosts: devhost
+  gather_facts: true
+
+  tasks:
+    - name: "Unlocking AD User Account ave started."
+      include_role:
+        name: UnlockuserRole

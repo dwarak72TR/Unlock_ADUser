@@ -1,0 +1,7 @@
+---
+ansible_user: ansible_user
+ansible_password: Splashing@611
+ansible_connection: winrm
+ansible_winrm_server_cert_validation: ignore
+#ansible_port: 5896
+#ansible_ssl: false

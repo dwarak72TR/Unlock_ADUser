@@ -1,0 +1,7 @@
+- name: "Load variables" 
+  include_vars:
+    file: "varmain.yml"
+ 
+- name: Load tasks to Unlock user in Active Directory
+  include_tasks: 'unlockusertask.yml'
+  when: module == 'EmpmgmtService'
