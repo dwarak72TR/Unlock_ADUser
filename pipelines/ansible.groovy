@@ -7,8 +7,7 @@ timestamps
     {  
         stage('Select Env And Invoke Playbook')
         {
-          dir('ansible')
-           {
+          
                     try{
                         ansiblePlaybook(
                          playbook: "$playbook"
@@ -21,7 +20,7 @@ timestamps
                         echo e.getMessage()
                         currentBuild.result='FAILURE'
                     }   
-           }
+           
         }
     }
 }
