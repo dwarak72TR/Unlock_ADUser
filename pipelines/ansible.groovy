@@ -11,8 +11,9 @@ timestamps
                 {
                     try{
                         // ansiblePlaybook(
-                        //   playbook: "$playbook",inventory: "inventory"
+                        //  // playbook: "$playbook",inventory: "inventory"
                         // )
+                        sh 'echo "for next time we will run the playbook not now"'
                       } 
                       
                     catch (e)
