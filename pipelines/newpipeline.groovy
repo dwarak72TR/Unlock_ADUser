@@ -8,12 +8,12 @@ timestamps
         stage('Select Env And Invoke Playbook')
         {
           
-                    // try{
-                    //     ansiblePlaybook(
-                    //      playbook: "$playbook"
-                    //     )
-                    //    // sh 'echo "for next time we will run the playbook not now"'
-                    //   } 
+                    try{
+                        ansiblePlaybook(
+                         playbook: "$playbook"
+                        )
+                       // sh 'echo "for next time we will run the playbook not now"'
+                      } 
                       
                     catch (e)
                     {
