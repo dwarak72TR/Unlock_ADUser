@@ -15,11 +15,11 @@ timestamps
                     //    // sh 'echo "for next time we will run the playbook not now"'
                     //   } 
                       
-                    // catch (e)
-                    // {
-                    //     echo e.getMessage()
-                    //     currentBuild.result='FAILURE'
-                    // }   
+                    catch (e)
+                    {
+                        echo e.getMessage()
+                        currentBuild.result='FAILURE'
+                    }   
            
         }
     }
