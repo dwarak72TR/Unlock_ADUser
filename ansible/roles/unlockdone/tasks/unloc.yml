@@ -1,0 +1,32 @@
+---
+- name: "Moving to Environment"
+  debug:
+    msg: "Moving to {{ env }} Environment....."
+    
+- name: Spliting the Specified Usernames and printing
+  set_fact:
+        list_of_usernames: "{{ list_of_usernames }} + {{ uname.split(',') }} " 
+    
+- name: Unlocking users Account one by one
+  debug:
+    msg: 
+     - "Trying to Unlock user {{ item }}  ........."
+     - "........"
+     - "Unlocked !!! Now Try to log in now"
+  with_items: "{{ list_of_usernames }}"
+
+    
+# - name: Separate User Names
+#       set_fact: userNames="{{unames.split(',')}}"
+
+
+#     - name: Unlock Users
+#        win_domain_user:
+#         name: {{ item }}
+#         state: present
+#         account_locked: no
+#         path: ou=test,dc=domain,dc=local
+#         with_items: 
+#             userNames
+
+
